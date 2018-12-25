@@ -1,0 +1,31 @@
+---
+title: "htmalwidget"
+author: "Mengjia Huang"
+date: "2018/12/20"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library("leaflet")
+
+quakes%>%
+  View()
+
+addCircleMarkers(map = addTiles(map=leaflet()),
+                 data=quakes)
+```
+
+```{r}
+leaflet()
+leaflet()%>%
+  addTiles()
+leaflet()%>%
+  addTiles()%>%
+  addCircleMarkers(data = quakes)
+  
+```
+
